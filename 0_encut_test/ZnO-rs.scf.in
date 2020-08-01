@@ -8,10 +8,9 @@
     tprnfor      = .true.
  /
  &system
-    ibrav     = 4, 
-    A         = 3.351
-    C         = 5.226
-    nat       = 4, 
+    ibrav     = 2,
+    A         = 4.14165648,
+    nat       = 2,
     ntyp      = 2,
     ecutwfc   = $KATOF$,
  /
@@ -25,9 +24,7 @@ ATOMIC_SPECIES
  Zn  1.0   Zn_pbe_v1.uspp.F.UPF
  O   1.0   O.pbe-n-kjpaw_psl.0.1.UPF
 ATOMIC_POSITIONS crystal
-Zn  0.333333  0.666667  0.000000
-O   0.333333  0.666667  0.375000
-Zn  0.666667  0.333333  0.500000
-O   0.666667  0.333333  0.875000  
+Zn  0.000000  0.000000  0.000000
+O   0.500000  0.500000  0.500000
 K_POINTS automatic
  6 6 6 0 0 0
