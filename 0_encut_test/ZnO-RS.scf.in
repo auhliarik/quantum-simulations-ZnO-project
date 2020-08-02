@@ -8,12 +8,16 @@
     tprnfor      = .true.
  /
  &system
-    ibrav     = 2,
-    A         = 4.14165648,
-    nat       = 2,
-    ntyp      = 2,
+    ibrav = 0
+    A = 4.14166
+    nat = 2
+    ntyp = 2
     ecutwfc   = $KATOF$,
  /
+ CELL_PARAMETERS {alat}
+  0.500000000000000   0.500000000000000   0.000000000000000
+  0.500000000000000   0.000000000000000   0.500000000000000
+  0.000000000000000   0.500000000000000   0.500000000000000
  &electrons
     diagonalization = 'david'
     mixing_mode     = 'plain'
@@ -21,10 +25,10 @@
     conv_thr        = 1.0d-8
  /
 ATOMIC_SPECIES
- Zn  1.0   Zn_pbe_v1.uspp.F.UPF
- O   1.0   O.pbe-n-kjpaw_psl.0.1.UPF
-ATOMIC_POSITIONS crystal
-Zn  0.000000  0.000000  0.000000
-O   0.000000  0.000000  0.500000
+ Zn  65.38000   Zn_pbe_v1.uspp.F.UPF
+ O   15.99900   O.pbe-n-kjpaw_psl.0.1.UPF
+ATOMIC_POSITIONS {crystal}
+Zn   0.000000000000000   0.000000000000000   0.000000000000000
+ O   0.500000000000000   0.500000000000000   0.500000000000000
 K_POINTS automatic
  6 6 6 0 0 0
