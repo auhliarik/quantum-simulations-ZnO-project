@@ -30,6 +30,6 @@ for encut in np.linspace(min_encut, max_encut, stp_encut):
     with open(pbs_script) as f:                         # create PBS script in final directory
         with open(wd + "/pbs_Hartree", "w") as fa:
             for line in f:
-                fa.write(line.replace("$NAME$",'MoS2-'+E_scf))
+                fa.write(line.replace("$NAME$",'ZnO-'+E_scf))
 
     os.system("cd "+wd+";"+run_cmd)                     # run calculation with PBS
