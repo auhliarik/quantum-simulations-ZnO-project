@@ -31,6 +31,6 @@ for kpt in np.arange(min_kpt, max_kpt, 1):
     with open(pbs_script) as f:                             # create PBS script in final directory
         with open(wd + "/pbs_Hartree", "w") as fa:
             for line in f:
-                fa.write(line.replace("$NAME$",'ZnS-RS-'+K_scf))
+                fa.write(line.replace("$NAME$",'ZnO-'+K_scf))
 
     os.system("cd "+wd+";"+run_cmd)                         # run calculation with PBS
