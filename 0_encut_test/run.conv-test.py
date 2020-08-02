@@ -3,7 +3,7 @@
 import os
 import numpy as np
 
-calc_script = 'ZnO-rs.scf.in'
+calc_script = 'ZnO-RS.scf.in'
 pbs_script = 'pbs_Hartree'
 
 min_encut = 25
