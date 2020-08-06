@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-
+g
 import os
 import numpy as np
 
@@ -8,8 +8,8 @@ pbs_script = 'pbs_Hartree'
 
 # pressure in GPa
 min_press = 0
-max_press = 25
-num_steps = 26
+max_press = 30
+num_steps = 31
 
 run_cmd = 'qsub pbs_Hartree'
 
