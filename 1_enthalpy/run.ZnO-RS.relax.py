@@ -13,7 +13,7 @@ num_steps = 31
 
 run_cmd = 'qsub pbs_Hartree'
 
-for press in np.linspace(min_press, max_press, stp_press):
+for press in np.linspace(min_press, max_press, num_steps):
     
     press = "{:5.3f}".format(10*press)                  # format energy cutoff string
 
