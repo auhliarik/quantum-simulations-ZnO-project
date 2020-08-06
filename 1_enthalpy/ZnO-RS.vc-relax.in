@@ -25,7 +25,7 @@
     ion_dynamics  = 'bfgs',
 /
 &cell
-    press = 10
+    press = $PRESS$
 /
 ATOMIC_SPECIES
     Zn  65.38000   Zn_pbe_v1.uspp.F.UPF
