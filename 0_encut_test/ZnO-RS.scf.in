@@ -12,7 +12,7 @@
     A = 4.14166
     nat = 2
     ntyp = 2
-    ecutwfc   = $KATOF$,
+    ecutwfc = $KATOF$,
 /
 &electrons
     diagonalization = 'david'
