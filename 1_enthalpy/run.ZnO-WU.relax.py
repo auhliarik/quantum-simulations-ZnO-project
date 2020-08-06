@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-g
+
 import os
 import numpy as np
 
