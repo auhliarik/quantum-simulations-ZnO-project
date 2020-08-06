@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import matplotlib
 matplotlib.use('Agg')
@@ -11,7 +11,7 @@ def get_p_enthalpy(mode):
     p_enthalpy = []
     for root, directories, files in os.walk("."):
         for directory in sorted(directories):
-            if f"vc-relax-{mode}-" in directory:
+            if "vc-relax-{}-".format(mode) in directory:
                 try:
                     p = float(directory[12:])
 
@@ -24,13 +24,13 @@ def get_p_enthalpy(mode):
                     p_enthalpy.append([p,enthalpy])
                 except:
                     print('error')
-    return np.array(sorted(pV, key=lambda x: x[0]))
+    return np.array(sorted(p_enthalpy, key=lambda x: x[0]))
 
-p_enthalpy_RS = get_p_V('RS')
+p_enthalpy_RS = get_p_enthalpy('RS')
 p_RS = p_enthalpy_RS[:,0]/10          # GPa
 enthalpy_RS = p_enthalpy_RS[:,1]      # A^3
 
-plt.plot(p_RS,enthalpy_RS,'RS enthalpy',label='relax. data')
+plt.plot(p_RS,enthalpy_RS,'bo',label='relax. data')
 plt.xlabel('Pressure [GPa]')
 plt.ylabel('Enthalpy [Ry]')
 plt.legend()
