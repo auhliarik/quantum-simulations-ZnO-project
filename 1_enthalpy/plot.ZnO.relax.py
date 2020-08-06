@@ -30,7 +30,12 @@ p_enthalpy_RS = get_p_enthalpy('RS')
 p_RS = p_enthalpy_RS[:,0]/10          # GPa
 enthalpy_RS = p_enthalpy_RS[:,1]      # A^3
 
-plt.plot(p_RS,enthalpy_RS,'bo',label='relax. data')
+p_enthalpy_RS = get_p_enthalpy('WU')
+p_WU = p_enthalpy_WU[:,0]/10          # GPa
+enthalpy_WU = p_enthalpy_WU[:,1]      # A^3
+
+plt.plot(p_RS,enthalpy_RS,'bo',label='RS enthalpy')
+plt.plot(p_WU,enthalpy_WU,'ro',label='WU enthalpy')
 plt.xlabel('Pressure [GPa]')
 plt.ylabel('Enthalpy [Ry]')
 plt.legend()
