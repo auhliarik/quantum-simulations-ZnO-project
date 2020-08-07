@@ -14,7 +14,7 @@
     C = 5.19
     nat = 4
     ntyp = 2
-    ecutwfc = 70.0,
+    ecutwfc = 60.0,
 /
 &electrons
     diagonalization = 'david',
@@ -37,5 +37,5 @@ ATOMIC_POSITIONS {crystal}
     O   0.000000000000000   0.000000000000000   0.380000000000000
     O   0.333333333333333   0.666666666666667   0.880000000000000
 K_POINTS automatic
-    5 5 5 0 0 0
+    6 6 6 0 0 0
 
