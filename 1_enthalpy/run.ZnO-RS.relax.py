@@ -8,8 +8,8 @@ pbs_script = 'pbs_Hartree'
 
 # pressure in GPa
 min_press = 0
-max_press = 30
-num_steps = 31
+max_press = 20
+num_steps = 21
 
 run_cmd = 'qsub pbs_Hartree'
 
