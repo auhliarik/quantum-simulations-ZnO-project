@@ -1,5 +1,5 @@
 #!/bin/bash
-#PBS -l nodes=hartree:ppn=4,walltime=1:00:00
+#PBS -l nodes=hartree:ppn=4,walltime=3:00:00
 #PBS -u uhliarik
 #PBS -N $NAME$
 #PBS -j oe
