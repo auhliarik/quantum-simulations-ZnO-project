@@ -30,11 +30,12 @@ def get_p_enthalpy(mode):
                 #     print('error')
     return np.array(sorted(p_enthalpy, key=lambda x: x[0]))
 
+
 p_enthalpy_RS = get_p_enthalpy('RS')
 p_RS = p_enthalpy_RS[:,0]/10            # GPa
 enthalpy_RS = p_enthalpy_RS[:,1]/2      # A^3, 2 atoms in basis
 
-p_enthalpy_RS = get_p_enthalpy('WU')
+p_enthalpy_WU = get_p_enthalpy('WU')
 p_WU = p_enthalpy_WU[:,0]/10          # GPa
 enthalpy_WU = p_enthalpy_WU[:,1]/8    # A^3, 8 atoms in basis
 
