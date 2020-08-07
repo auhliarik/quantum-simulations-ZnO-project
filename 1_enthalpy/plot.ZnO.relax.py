@@ -19,12 +19,12 @@ def get_p_enthalpy(mode):
                 if 'Final enthalpy' in file:
                     start_flag = file.find('Final enthalpy =')
                     end_flag = file.find('\n', start_flag)
-                    enthalpy = float(file[start_flag + len('Final enthalpy ='):end_flag])
+                    enthalpy = float(file[start_flag + len('Final enthalpy ='):end_flag-3])
                 else:
                     # If 'Final enthalpy' is not present, take the last calculated one
                     start_flag = file.rfind('enthalpy new')
                     end_flag = file.find('\n', start_flag)
-                    enthalpy = float(file[start_flag + len('enthalpy new            ='):end_flag])
+                    enthalpy = float(file[start_flag + len('enthalpy new            ='):end_flag-3])
                 p_enthalpy.append([p,enthalpy])
                 # except:
                 #     print('error')
