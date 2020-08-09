@@ -39,8 +39,8 @@ p_enthalpy_WU = get_p_enthalpy('WU')
 p_WU = p_enthalpy_WU[:,0]/10            # GPa
 enthalpy_WU = p_enthalpy_WU[:,1]/4      # A^3, 4 atoms in basis
 
-plt.plot(p_RS,enthalpy_RS,'bo',label='RS enthalpy')
-plt.plot(p_WU,enthalpy_WU,'ro',label='WU enthalpy')
+plt.plot(p_RS,enthalpy_RS,'b.-',label='RS enthalpy')
+plt.plot(p_WU,enthalpy_WU,'r.-',label='WU enthalpy')
 plt.xlabel('Pressure [GPa]')
 plt.ylabel('Enthalpy/atom [Ry]')
 plt.legend()
