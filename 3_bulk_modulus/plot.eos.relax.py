@@ -16,7 +16,7 @@ structure = 'RS'
 
 def get_p_V():
     pV = []
-    for root, directories, files in os.walk("."):
+    for root, directories, files in os.walk("../1_enthalpy"):
         for directory in sorted(directories):
             if "vc-relax-{}-".format(structure) in directory:
                 try:
