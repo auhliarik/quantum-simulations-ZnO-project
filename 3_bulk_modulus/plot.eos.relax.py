@@ -8,7 +8,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.optimize import curve_fit
 
-structure = 'RS'
+structure = 'WU'
 
 def eos(V,b,bd):
     V0_m = V[0]*np.ones(len(V))
@@ -34,7 +34,8 @@ pV = get_p_V()
 print(pV)
 p = pV[:,0]/10  # GPa
 V = pV[:,1]     # A^3
-
+print(p)
+print(V)
 popt, pcov = curve_fit(eos,V,p,bounds=(0,[1000.0,100.0]))
 print('Bulk modulus:\t{} GPa'.format(popt[0]))
 print('Derivation of bulk modulus at p=0:\t{}'.format(popt[1]))
