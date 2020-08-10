@@ -48,4 +48,4 @@ plt.xlabel('Pressure [GPa]')
 plt.ylabel('Volume [A^3]')
 plt.legend()
 plt.tight_layout()
-plt.savefig("bulk-fit-RS.png")gi
+plt.savefig("bulk-fit-RS.png")
