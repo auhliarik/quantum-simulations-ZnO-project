@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import matplotlib
 matplotlib.use('Agg')
@@ -41,7 +41,7 @@ print('Derivation of bulk modulus at p=0:\t{}'.format(popt[1]))
 v_calc = np.linspace(V[0],V[-1],101)
 p_calc = eos(v_calc,*popt)
 
-plt.plot(p,V,'bo',label='vc-relax-ZnS-RS data')
+plt.plot(p,V,'bo',label='vc-relax data for RS')
 plt.plot(p_calc,v_calc,'r-',label='fit: B0={:.3f}, B0\'={:.3f}'.format(*popt))
 
 plt.xlabel('Pressure [GPa]')
