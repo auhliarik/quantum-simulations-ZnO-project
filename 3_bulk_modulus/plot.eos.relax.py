@@ -8,33 +8,30 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.optimize import curve_fit
 
+structure = 'WU'
+
 def eos(V,b,bd):
     V0_m = V[0]*np.ones(len(V))
     return 3/2*b*(np.power(V0_m/V,7/3)-np.power(V0_m/V,5/3))*(1+3/4*(bd-4)*(np.power(V0_m/V,2/3)-1))
-
-structure = 'RS'
 
 def get_p_V():
     pV = []
     for root, directories, files in os.walk("../1_enthalpy"):
         for directory in sorted(directories):
             if "vc-relax-{}-".format(structure) in directory:
-                try:
-                    p = float(directory[9:])
+                p = float(directory[12:])
 
-                    output = open(root+"/"+directory+"/vc-relax.out").read()
+                output = open(root+"/"+directory+"/vc-relax.out").read()
 
-                    start_flag = output.rfind('new unit-cell volume')
-                    end_flag = output.find('\n',start_flag)
-                    V = float(output[start_flag:end_flag].split()[-3])
+                start_flag = output.rfind('new unit-cell volume')
+                end_flag = output.find('\n',start_flag)
+                V = float(output[start_flag:end_flag].split()[-3])
 
-                    pV.append([p,V])
-                except:
-                    print('error')
-                    pass
+                pV.append([p, V])
     return np.array(sorted(pV, key=lambda x: x[0]))
 
 pV = get_p_V()
+print(pV)
 p = pV[:,0]/10  # GPa
 V = pV[:,1]     # A^3
 
@@ -51,4 +48,4 @@ plt.xlabel('Pressure [GPa]')
 plt.ylabel('Volume [A^3]')
 plt.legend()
 plt.tight_layout()
-plt.savefig("bulk-fit.png")
+plt.savefig("bulk-fit-{}.png".format(structure))
