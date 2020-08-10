@@ -8,7 +8,7 @@ import numpy as np
 from matplotlib import pyplot as plt
 from scipy.optimize import curve_fit
 
-structure = 'WU'
+structure = 'RS'
 
 def eos(V,b,bd):
     V0_m = V[0]*np.ones(len(V))
@@ -42,8 +42,8 @@ print('Derivation of bulk modulus at p=0:\t{}'.format(popt[1]))
 v_calc = np.linspace(V[0],V[-1],101)
 p_calc = eos(v_calc,*popt)
 
-plt.plot(p,V,'bo',label='relax. data')
-plt.plot(p_calc,v_calc,'r-',label='fit: K={:.3f}, K0={:.3f}'.format(*popt))
+plt.plot(p,V,'bo',label='vc-relax data for {}'.format(structure))
+plt.plot(p_calc,v_calc,'r-',label='fit: B0={:.3f}, B0\'={:.3f}'.format(*popt))
 plt.xlabel('Pressure [GPa]')
 plt.ylabel('Volume [A^3]')
 plt.legend()
