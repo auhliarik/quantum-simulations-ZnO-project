@@ -1,5 +1,5 @@
 &control
-    calculation  = 'scf',
+    calculation  = 'nscf',
     prefix       = 'ZnO-RS',
     outdir       = 'outdir',
     pseudo_dir   = '~/PP_eff'
@@ -14,7 +14,7 @@
     nat = 2
     ntyp = 2
     nbnd      = 13
-    ecutwfc   = 60.0,
+    ecutwfc   = 70.0,
     ecutrho   = 500.0,
     occupations = 'tetrahedra_opt',
 /
@@ -31,4 +31,4 @@ ATOMIC_POSITIONS crystal
     Zn  0.000000000000000   0.000000000000000   0.000000000000000
     O   0.500000000000000   0.500000000000000   0.500000000000000
 K_POINTS automatic
- 30 30 30 0 0 0
+ 10 10 10 0 0 0
