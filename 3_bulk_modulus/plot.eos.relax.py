@@ -12,11 +12,13 @@ def eos(V,b,bd):
     V0_m = V[0]*np.ones(len(V))
     return 3/2*b*(np.power(V0_m/V,7/3)-np.power(V0_m/V,5/3))*(1+3/4*(bd-4)*(np.power(V0_m/V,2/3)-1))
 
+structure = 'RS'
+
 def get_p_V():
     pV = []
     for root, directories, files in os.walk("."):
         for directory in sorted(directories):
-            if "vc-relax-" in directory:
+            if "vc-relax-{}-".format(structure) in directory:
                 try:
                     p = float(directory[9:])
 
