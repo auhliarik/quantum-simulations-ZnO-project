@@ -3,6 +3,6 @@
   prefix   = "ZnO-WU"
   fildos   = "ZnO-WU.dos",
   Emin     = -10.0,
-  Emax     = 25.0,
+  Emax     = 40.0,
   DeltaE   = 0.05
 /
