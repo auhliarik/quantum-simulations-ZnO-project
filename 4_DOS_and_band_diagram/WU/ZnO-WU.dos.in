@@ -2,7 +2,7 @@
   outdir   = "outdir",
   prefix   = "ZnO-WU"
   fildos   = "ZnO-WU.dos",
-  Emin     = -10.0,
-  Emax     = 40.0,
+  Emin     = -15.0,
+  Emax     = 35.0,
   DeltaE   = 0.05
 /
