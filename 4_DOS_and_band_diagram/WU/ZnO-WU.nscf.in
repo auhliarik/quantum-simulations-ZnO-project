@@ -14,7 +14,7 @@
     C = 5.19
     nat = 4
     ntyp = 2
-    nbnd      = 13
+    nbnd      = 32
     ecutwfc   = 70.0,
     ecutrho   = 500.0,
     occupations = 'tetrahedra',

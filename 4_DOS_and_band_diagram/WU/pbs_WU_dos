@@ -4,5 +4,6 @@
 #PBS -j oe
 #PBS -V
 source /opt/intel/bin/compilervars.sh intel64
+cd $PBS_O_WORKDIR
 /home/s/root/bin/mpirun -np 4 /home/toth/Software/qe.6.3.0/bin/dos.x < ZnO-WU.dos.in > ZnO-WU.dos.out
-python3 plot_dos.py
+python3 plot_WU_dos.py
