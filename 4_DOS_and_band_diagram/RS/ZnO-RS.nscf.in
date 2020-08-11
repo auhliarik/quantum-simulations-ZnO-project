@@ -13,7 +13,7 @@
     A = 4.14166
     nat = 2
     ntyp = 2
-    nbnd      = 13
+    nbnd      = 20
     ecutwfc   = 70.0,
     ecutrho   = 500.0,
     occupations = 'tetrahedra',
