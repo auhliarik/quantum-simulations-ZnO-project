@@ -1,0 +1,8 @@
+#!/bin/bash
+#PBS -l nodes=hartree:ppn=4,walltime=1:00:00
+#PBS -N ZnO-dos
+#PBS -j oe
+#PBS -V
+source /opt/intel/bin/compilervars.sh intel64
+/home/s/root/bin/mpirun -np 4 /home/toth/Software/qe.6.3.0/bin/dos.x < ZnO-WU.dos.in > ZnO-WU.dos.out
+python3 plot_dos.py
