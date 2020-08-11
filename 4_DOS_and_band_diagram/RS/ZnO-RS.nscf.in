@@ -16,7 +16,7 @@
     nbnd      = 13
     ecutwfc   = 70.0,
     ecutrho   = 500.0,
-    occupations = 'tetrahedra_opt',
+    occupations = 'tetrahedra',
 /
 &electrons
     diagonalization = 'david',
