@@ -80,7 +80,7 @@ def plot(bands, x, x_label_pos, fermi):
 
     # add information to graph
     plt.xlim(xaxis)
-    plt.ylim(yaxis)
+    plt.ylim((-25, 40))
     plt.xlabel(r'k-path')
     plt.ylabel(r'$E-E_F$ [eV]')
     plt.savefig('ZnO-RS_bands.pdf',bbox_inches='tight',pad_inches=1/25.4,format='pdf')
