@@ -87,5 +87,5 @@ def plot(bands, x, x_label_pos, fermi):
 
 efermi = read_fermi('ZnO-WU.scf.out')
 bands, x = read_bnd('ZnO-WU.bands')
-x_label_pos = [x[i] for i in [0,63,94,116,182,236,274,296,340,378,401]]
+x_label_pos = [x[i] for i in [0,44,69,120,143,187,212,263,264,287,288,311,312]]
 plot(bands,x,x_label_pos,efermi)
