@@ -67,6 +67,8 @@ def plot(bands, x, x_label_pos, fermi):
     # calculate plot bounds
     xaxis = [min(x),max(x)]
     yaxis = [1e3,-1e3]
+    plt.xlim(xaxis)
+    plt.ylim((-25, 40))
     for i in bands.values(): 
         yaxis = [min([yaxis[0]]+i),max([yaxis[1]]+i)]
         plt.plot(x, np.array(i)-fermi, color='black', lw=0.2)
@@ -79,8 +81,6 @@ def plot(bands, x, x_label_pos, fermi):
     plt.xticks(x_label_pos,[r'$\Gamma$',r'X',r'W',r'K',r'$\Gamma$',r'L',r'U',r'W',r'L',r'K$|$U',r'X'])
 
     # add information to graph
-    plt.xlim(xaxis)
-    plt.ylim((-25, 40))
     plt.xlabel(r'k-path')
     plt.ylabel(r'$E-E_F$ [eV]')
     plt.savefig('ZnO-RS_bands.pdf',bbox_inches='tight',pad_inches=1/25.4,format='pdf')
