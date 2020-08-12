@@ -1,0 +1,10 @@
+#!/bin/bash
+#PBS -l nodes=hartree:ppn=4,walltime=1:00:00
+#PBS -N ZnO-WU-bandspp
+#PBS -j oe
+#PBS -V
+source /opt/intel/bin/compilervars.sh intel64
+cd $PBS_O_WORKDIR
+/home/s/root/bin/mpirun -np 4 /home/toth/Software/qe.6.3.0/bin/bands.x < ZnO-WU.bandspp.in > ZnO-WU.bandspp.out
+# plot bands to bands.pdf file
+python3 ZnO-WU_bands_plot.py

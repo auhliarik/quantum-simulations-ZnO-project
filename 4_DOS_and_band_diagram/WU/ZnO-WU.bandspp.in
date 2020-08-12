@@ -1,0 +1,6 @@
+&bands
+    prefix     = 'ZnO-RS',
+    outdir     = 'outdir',
+    filband    = 'ZnO-RS.bands',
+    no_overlap = .true.,
+/
