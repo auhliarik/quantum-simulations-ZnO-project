@@ -38,7 +38,7 @@ def read_bnd(file_name):
         match = re.match(coord_regex,line)
         if match:
             x_coord.append([float(match.group(1)), float(match.group(2)), float(match.group(3)) ])
-            bandddd = lines[i+1] + lines[i+2]
+            bandddd = lines[i+1] + lines[i+2] + lines[i+3] + lines[i+4]
             bandddd = bandddd.split()
 
             for j in range(len(bandddd)):
