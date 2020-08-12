@@ -1,6 +1,6 @@
 &control
     calculation  = 'bands',
-    prefix       = 'ZnO-WU,
+    prefix       = 'ZnO-WU',
     outdir       = 'outdir',
     pseudo_dir   = '~/PP_eff'
 /
