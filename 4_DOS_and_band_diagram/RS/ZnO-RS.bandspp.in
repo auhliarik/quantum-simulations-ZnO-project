@@ -1,6 +1,6 @@
 &bands
-    prefix     = 'silicon',
+    prefix     = 'ZnO-RS',
     outdir     = 'outdir',
-    filband    = 'si.bands',
+    filband    = 'ZnO-RS.bands',
     no_overlap = .true.,
 /
