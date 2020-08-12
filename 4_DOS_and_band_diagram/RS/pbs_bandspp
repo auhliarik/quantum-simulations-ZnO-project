@@ -7,4 +7,4 @@ source /opt/intel/bin/compilervars.sh intel64
 cd $PBS_O_WORKDIR
 /home/s/root/bin/mpirun -np 4 /home/toth/Software/qe.6.3.0/bin/bands.x < ZnO-RS.bandspp.in > ZnO-RS.bandspp.out
 # plot bands to bands.pdf file
-python3 qe_bands_plot.py
+python3 ZnO-RS_bands_plot.py

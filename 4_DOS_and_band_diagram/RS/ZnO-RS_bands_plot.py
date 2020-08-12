@@ -83,9 +83,9 @@ def plot(bands, x, x_label_pos, fermi):
     plt.ylim(yaxis)
     plt.xlabel(r'k-path')
     plt.ylabel(r'$E-E_F$ [eV]')
-    plt.savefig('bands.pdf',bbox_inches='tight',pad_inches=1/25.4,format='pdf')
+    plt.savefig('ZnO-RS_bands.pdf',bbox_inches='tight',pad_inches=1/25.4,format='pdf')
 
-efermi = read_fermi('si.scf.out')
-bands, x = read_bnd('si.bands')
+efermi = read_fermi('ZnO-RS.scf.out')
+bands, x = read_bnd('ZnO-RS.bands')
 x_label_pos = [x[i] for i in [0,63,94,116,182,236,274,296,340,378,401]]
 plot(bands,x,x_label_pos,efermi)
