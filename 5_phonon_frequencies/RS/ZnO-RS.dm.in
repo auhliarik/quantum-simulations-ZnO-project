@@ -1,4 +1,7 @@
  &input 
-  fildyn='ZnO-RS.gamma', 
-  asr='crystal' 
+  fildyn='ZnO-RS.gamma',
+  asr='crystal'
+  q(1) = 0.01
+  q(2) = 0
+  q(3) = 0
  /
