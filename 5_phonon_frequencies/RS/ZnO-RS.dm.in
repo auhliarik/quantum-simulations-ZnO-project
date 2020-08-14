@@ -1,4 +1,4 @@
  &input 
-  fildyn='si.gamma', 
+  fildyn='ZnO-RS.gamma', 
   asr='crystal' 
  /

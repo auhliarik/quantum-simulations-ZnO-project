@@ -1,12 +1,13 @@
 phonons of Si at Gamma point
  &inputph
   tr2_ph   = 5.0d-16,
-  prefix   = 'silicon',
+  prefix   = 'ZnO-RS',
   epsil    = .true.,
   trans    = .true.,
   asr      = .true.
-  amass(1) = 28.08,
+  amass(1) = 65.38000,  ! Zn
+  amass(2) = 15.99900   ! O
   outdir   = 'calc',
-  fildyn   = 'si.gamma',
+  fildyn   = 'ZnO-RS.gamma',
  /
 0.0 0.0 0.0
