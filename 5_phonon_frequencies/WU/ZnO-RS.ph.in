@@ -1,0 +1,13 @@
+phonons of Si at Gamma point
+ &inputph
+  tr2_ph   = 5.0d-16,
+  prefix   = 'ZnO-WU',
+  epsil    = .true.,
+  trans    = .true.,
+  asr      = .true.
+  amass(1) = 65.38000,  ! Zn
+  amass(2) = 15.99900   ! O
+  outdir   = 'calc',
+  fildyn   = 'ZnO-WU.gamma',
+ /
+0.0 0.0 0.0
