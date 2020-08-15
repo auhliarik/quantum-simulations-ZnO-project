@@ -76,7 +76,7 @@ def plot(bands, x, x_label_pos, fermi):
     # plot bands and vertical lines at special points
     plt.plot(xaxis, [0, 0], color="#66ccff",ls="solid", alpha = 0.5,lw = 1.2)
     plt.vlines(x_label_pos,yaxis[0],yaxis[1],colors='black',linestyles='--',lw = 0.2)
-    plt.xticks(x_label_pos,[r'$\Gamma$',r'M',r'K',r'$\Gamma$',r'A',r'L',r'H',r'A$|$L',r'M$|$H',r'K$|\Gamma$',r'X'])
+    plt.xticks(x_label_pos,[r'$\Gamma$',r'M',r'K',r'$\Gamma$',r'A',r'L',r'H',r'A'])
 
     # add information to graph
     plt.xlim(xaxis)
@@ -87,5 +87,5 @@ def plot(bands, x, x_label_pos, fermi):
 
 efermi = read_fermi('ZnO-WU.scf.out')
 bands, x = read_bnd('ZnO-WU.bands')
-x_label_pos = [x[i] for i in [0,44,69,120,143,187,212,263,264,287,288,311,312]]
+x_label_pos = [x[i] for i in [0,44,69,120,143,187,212,263,264]]
 plot(bands,x,x_label_pos,efermi)
